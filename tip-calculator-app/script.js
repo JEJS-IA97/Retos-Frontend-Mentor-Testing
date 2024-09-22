@@ -16,15 +16,14 @@ tips.forEach((val) => {
     val.addEventListener("click", handleClick);
 });
 
-// Inicialización de valores
-billInput.value = "0.0";
+billInput.value = "0";
 peopleInput.value = "1";
 tipPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 
 let billValue = 0.0;
 let peopleValue = 1;
-let tipValue = 0.15; // Valor por defecto del 15%
+let tipValue = 0.15; 
 
 function billInputFun(){
     billValue = parseFloat(billInput.value);
@@ -36,10 +35,10 @@ function peopleInputFun() {
 
     if (peopleValue < 1) {
         error.classList.remove("hidden");
-        peopleInput.style.border = "2px solid red";
+        peopleInput.style.border = "2px solid orange";
     } else {
         error.classList.add("hidden");
-        peopleInput.style.border = "2px solid hsl(172, 67%, 45%)";
+        peopleInput.style.border = "2px solid orange";
         calculateTip();
     }
 }
