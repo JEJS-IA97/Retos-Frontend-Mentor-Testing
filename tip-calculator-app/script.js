@@ -21,7 +21,7 @@ peopleInput.value = "1";
 tipPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 totalPerPerson.innerHTML = "$" + (0.0).toFixed(2);
 
-let billValue = 0.0;
+let billValue = 0;
 let peopleValue = 1;
 let tipValue = 0.15; 
 
@@ -31,15 +31,16 @@ function billInputFun(){
 }
 
 function peopleInputFun() {
-    peopleValue = parseFloat(peopleInput.value);
+    const inputValue = peopleInput.value; 
+    peopleValue = parseFloat(inputValue);
 
-    if (peopleValue < 1) {
-        error.classList.remove("hidden");
-        peopleInput.style.border = "2px solid orange";
+    if (isNaN(peopleValue) || peopleValue < 1) {
+        error.classList.remove("hidden"); 
+        peopleInput.style.border = "2px solid orange"; 
     } else {
-        error.classList.add("hidden");
-        peopleInput.style.border = "2px solid orange";
-        calculateTip();
+        error.classList.add("hidden"); 
+        peopleInput.style.border = "2px solid orange"; 
+        calculateTip(); 
     }
 }
 
