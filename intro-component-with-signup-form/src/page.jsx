@@ -80,7 +80,7 @@ const Page = () => {
     <div className="relative">
   <div className="bg-black opacity-15 mobile:h-[90px] mobile:w-[330px] rounded-xl desktop:h-[60px] desktop:w-[540px] absolute z-0 top-2">
   </div>
-  <div className="bg-Accent-Blue mobile:h-[90px] mobile:w-[330px] mb-[30px] flex flex-row justify-center items-center text-white pl-[70px] pr-[70px] rounded-xl desktop:h-[60px] desktop:w-[540px] relative z-10">
+  <div className="bg-Accent-Blue mobile:h-[90px] mobile:w-[330px] mb-[25px] flex flex-row justify-center items-center text-white pl-[70px] pr-[70px] rounded-xl desktop:h-[60px] desktop:w-[540px] relative z-10">
     <p className="text-center text-[16px]"><span className="font-bold">Try it free 7 days</span> then $20/mo. thereafter</p>
   </div>
   </div>
@@ -88,7 +88,7 @@ const Page = () => {
   <div className="relative ">
   <div className="mobile:h-full w-[330px] bg-black opacity-15 flex flex-col items-center p-[25px] desktop:p-[40px] gap-[15px] desktop:gap-[20px] rounded-xl desktop:h-full desktop:w-[540px] absolute z-0 top-2"></div>
 
-  <form onSubmit={handleSubmit} id="registerForm" className="w-[330px] bg-white flex flex-col items-center p-[25px] desktop:p-[40px] gap-[15px] desktop:gap-[20px] rounded-xl mobile:h-full desktop:w-[540px] relative z-10">
+  <form onSubmit={handleSubmit} id="registerForm" className="w-[330px] bg-white flex flex-col items-center p-[25px] desktop:p-[40px] gap-[17px] desktop:gap-[22px] rounded-xl mobile:h-full desktop:w-[540px] relative z-10">
     <div className="relative flex flex-col items-end" >
       <input 
       type="text" 
@@ -96,7 +96,7 @@ const Page = () => {
       value={formValues.first}
       onChange={handleChange}
       placeholder="First Name"
-      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[18px] font-semibold text-Dark-Blue pl-5 pr-5 mobile:right-[20px] ${formErrors.first ? 'border-Primary-Red' : ''}`}/>
+      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[16px] font-semibold text-Dark-Blue pl-5 pr-5 focus:border-black  focus:outline-none  mobile:right-[20px] ${formErrors.first ? 'border-Primary-Red' : 'border-gray-300'}`}/>
       <img src={errorIcon} alt="error" className={`absolute top-[15px] mobile:right-[20px] right-[25px] ${formErrors.first ? 'block' : 'hidden'}`} />
       <span className={`text-Primary-Red text-[11px] font-semibold mt-1 ${formErrors.first ? 'block' : 'hidden'}`}>First name cannot be empty</span>
     </div>
@@ -108,7 +108,7 @@ const Page = () => {
       value={formValues.last}
       onChange={handleChange}
       placeholder="Last Name"
-      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[18px] font-semibold text-Dark-Blue pl-5 pr-5 ${formErrors.last ? 'border-Primary-Red' : ''}`}/>
+      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[16px] font-semibold text-Dark-Blue pl-5 pr-5 focus:border-black  focus:outline-none ${formErrors.last ? 'border-Primary-Red' : 'border-gray-300'}`}/>
       <img src={errorIcon} alt="error" className={`absolute top-[15px] mobile:right-[20px]  right-[25px] ${formErrors.last ? 'block' : 'hidden'}`} />
       <span className={`text-Primary-Red text-[11px] font-semibold mt-1 ${formErrors.last ? 'block' : 'hidden'}`}>Last name cannot be empty</span>
     </div>
@@ -120,21 +120,20 @@ const Page = () => {
       value={formValues.email}
       onChange={handleChange}
       placeholder="Email Address"
-      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[18px] font-semibold text-Dark-Blue pl-5 pr-5 ${formErrors.email ? 'border-Primary-Red' : ''}`}/>
+      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[16px] font-semibold text-Dark-Blue pl-5 pr-5 focus:border-black  focus:outline-none ${formErrors.email ? 'border-Primary-Red' : 'border-gray-300'}`}/>
       <img src={errorIcon} alt="error" className={`absolute top-[15px] mobile:right-[20px] right-[25px] ${formErrors.email ? 'block' : 'hidden'}`} />
       <span className={`text-Primary-Red text-[11px] font-semibold mt-1 ${formErrors.email ? 'block' : 'hidden'}`}>Email cannot be empty</span>
     </div>
 
     <div className="relative flex flex-col items-end" >
     <input
-      type="password"
-      id="password"
-      value={formValues.password}
-      onChange={handleChange}
-      placeholder="Password"
-      className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border-2 rounded text-[18px] font-semibold text-Dark-Blue pl-5 ${
-      formErrors.password ?'border-Primary-Red' : ''
-      }`}
+  type="password"
+  id="password"
+  value={formValues.password}
+  onChange={handleChange}
+  placeholder="Password"
+  className={`mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] border rounded text-[16px] font-semibold  text-Dark-Blue pl-5 focus:border-black  focus:outline-none ${formErrors.password ? 'border-Primary-Red' : 'border-gray-300' 
+        }`}
       />
       <img src={errorIcon} alt="error" className={`absolute top-[15px] mobile:right-[20px] right-[25px] ${formErrors.password ? 'block' : 'hidden'}`} />
       <span className={`text-Primary-Red text-[11px] font-semibold mt-1 ${formErrors.password ? 'block' : 'hidden'}`}>Password cannot be empty</span>
@@ -143,12 +142,12 @@ const Page = () => {
 
     <button
       type="submit"
-      className="mobile:w-[280px] mobile:h-[55px] desktop:w-[460px] bg-Primary-Green text-white rounded-lg text-[18p] font-semibold border-b-4 border-black border-opacity-20 hover:opacity-70"
+      className="mobile:w-[280px] mobile:h-[55px] pt-1 desktop:w-[460px] bg-Primary-Green text-white rounded-lg text-[18px] font-semibold border-b-4 border-black border-opacity-20 hover:opacity-70"
       >
       CLAIM YOUR FREE TRIAL
     </button>
 
-    <p className="text-Grayish-Blue text-center text-[12px]">By clicking the button, you are agreeing to our <span className="text-Primary-Red font-bold">Terms and Services</span></p>
+    <p className="text-Grayish-Blue text-center text-[11px] mt-[-4px]">By clicking the button, you are agreeing to our <span className="text-Primary-Red font-bold">Terms and Services</span></p>
   </form>
   </div>
   </div>
