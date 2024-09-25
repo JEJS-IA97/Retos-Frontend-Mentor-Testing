@@ -28,6 +28,7 @@
             name="bill"
             id="bill-input"
             class="bill-input"
+            placeholder="0"
           />
         </div>
       </div>
@@ -36,11 +37,11 @@
         <label for="">Select Tip %</label>
 
         <div class="tip">
-          <div class="tips tip-5">5%</div>
-          <div class="tips tip-10">10%</div>
-          <div class="tips tip-15">15%</div>
-          <div class="tips tip-25">25%</div>
-          <div class="tips tip-50">50%</div>
+          <button class="tips tip-5">5%</button>
+          <button class="tips tip-10">10%</button>
+          <button class="tips tip-15">15%</button>
+          <button class="tips tip-25">25%</button>
+          <button class="tips tip-50">50%</button>
           <div id="tip-custom">
             <input type="number" class="tip-custom" placeholder="Custom" />
           </div>
@@ -55,7 +56,7 @@
 
         <div class="input">
           <img src="./images/icon-person.svg" alt="" />
-          <input type="number" class="input people-input" id="people-input">
+          <input type="number" placeholder="0" class="input people-input" id="people-input">
         </div>
       </div>
     </div>
@@ -81,14 +82,9 @@
         </div>
       </div>
 
-      <div class="reset">Reset</div>
+      <button class="reset" disabled>Reset</button>
     </div>
   </main>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"  rel="noopener">Frontend Mentor</a>. 
-    Coded by <a href="#">Jose Jimenez</a>.
-  </div>
 
   <script src="./script.js"></script>
 </body>

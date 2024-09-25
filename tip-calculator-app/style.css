@@ -37,7 +37,7 @@ main{
     min-width: 375px;
     background-color: var(--White);
     padding: 30px;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -51,6 +51,8 @@ main .top, .bottom{
 
 .bill{
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .top, .bill, .select-tip, .peopleNumber{
@@ -85,10 +87,16 @@ input{
 input:hover{
     border: 2px solid;
     cursor: pointer;
+
+}
+
+input::placeholder{
+    color: var(--Very-dark-cyan);
+    opacity: 50%;
 }
 
 .bill input{
-    width: 315px;
+    width: 100%;
     height: 50px;
 }
 
@@ -99,26 +107,29 @@ input:hover{
 }
 
 .select-tip{
-    margin-top: 32px;
+    margin-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .select-tip .tip{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
-.tip div{
+.tip .tips{
     background-color: var(--Very-dark-cyan);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45px;
+    height: 55px;
     color: var(--White);
     border-radius: 4px;
     cursor: pointer;
     font-size: 24px;
+    border: none;
 }
 
 .tip .active-tip{
@@ -131,17 +142,21 @@ input:hover{
 }
 
 #tip-custom input{
+    
     width: 100%;
     height: 100%;
 }
 
 #tip-custom input::placeholder{
     color: var(--Very-dark-cyan);
+    opacity: 50%;
 }
 
 .peopleNumber{
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .peopleNumber .peopleLabel{
@@ -162,7 +177,7 @@ input:hover{
 }
 
 .peopleNumber input{
-    width: 315px;
+    width: 100%;
     height: 50px;
 }
 
@@ -179,7 +194,7 @@ main .bottom{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
-    width: 330px;
+    width: 100%;
     height: 255px;
 }
 
@@ -232,13 +247,20 @@ main .bottom{
     border-radius: 4px;
     cursor: pointer;
     margin-top: 22px;
+    border: none;
   }
   
   .bottom .reset:hover {
     background-color: var(--Light-grayish-cyan);
   }
 
-  @media(min-width: 1028px) {
+  .bottom .reset:disabled {
+    background-color: rgba(53, 174, 174, 0.3);
+    color: rgba(0, 0, 0, 0.1); 
+    cursor: not-allowed; 
+  }
+
+  @media(min-width: 1440px) {
     body{
         min-height: 100vh;
     }
@@ -255,7 +277,7 @@ main .bottom{
 
     .logo img{
         width: 90px;
-        margin-bottom: 54px;
+        margin-bottom: 50px;
     }
 
     .top{
