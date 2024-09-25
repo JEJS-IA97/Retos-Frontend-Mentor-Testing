@@ -58,15 +58,13 @@ const Page = () => {
   <div className="bg-Primary-Red flex justify-center items-center h-screen font-Poppins">
 
   <div className="absolute inset-0">
-
     <img src={mobileBackground} alt="Background mobile" className="desktop:hidden mobile:block sm:hidden w-full h-full object-cover" />
-
     <img src={desktopBackground} alt="Background desktop" className=" mobile:hidden sm:block desktop:block w-full h-full object-cover " />
   </div>
 
-  <div className="mobile:w-[375px] desktop:w-full flex desktop:flex-row mobile:flex-col mobile:items-center desktop:justify-center ">
+  <main className="mobile:w-[375px] desktop:w-full flex desktop:flex-row mobile:flex-col mobile:items-center desktop:justify-center ">
 
-  <div className="desktop:mr-[70px] desktop:w-[500px] desktop:h-[210px] mobile:w-[330px]">
+  <header className="desktop:mr-[70px] desktop:w-[500px] desktop:h-[210px] mobile:w-[330px]">
   <div className="mb-[25px]">
     <h1 className="mobile:text-[26px] desktop:text-[50px] desktop:w-[500px] font-bold text-white mobile:text-center desktop:text-start desktop:leading-[60px]">Learn to code by watching others</h1>
   </div>
@@ -74,9 +72,9 @@ const Page = () => {
   <div className="mb-[70px] mobile:w-[330px]">
     <p className="mobile:text-center desktop:text-start text-white font-medium text-[16px] desktop:w-[500px]">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
   </div>
-  </div>
+  </header>
 
-  <div>
+  <section>
     <div className="relative">
   <div className="bg-black opacity-15 mobile:h-[90px] mobile:w-[330px] rounded-xl desktop:h-[60px] desktop:w-[540px] absolute z-0 top-2">
   </div>
@@ -149,8 +147,8 @@ const Page = () => {
     <p className="text-Grayish-Blue text-center text-[11px] mt-[-8px]">By clicking the button, you are agreeing to our <span className="text-Primary-Red font-bold">Terms and Services</span></p>
   </form>
   </div>
-  </div>
-  </div>
+  </section>
+  </main>
 </div>
 
   );
