@@ -22,17 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-*.sketch
-*.xd
-*.fig
-.DS_Store
-
-cypress/
-
-node_modules/cypress/
-
-.cypress/
-
-node_modules/
-cypress.config.js

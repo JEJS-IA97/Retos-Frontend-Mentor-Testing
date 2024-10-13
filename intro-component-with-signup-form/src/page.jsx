@@ -32,7 +32,7 @@ const Page = () => {
         const errors = {
           first: formValues.first === '',
           last: formValues.last === '',
-          email: formValues.email === '',
+          email: !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formValues.email),
           password: formValues.password === '',
         };
 
@@ -139,7 +139,12 @@ const Page = () => {
 
     <button
       type="submit"
-      className="mobile:w-[280px] mobile:h-[55px] pt-1 desktop:w-[460px] bg-Primary-Green text-white rounded-lg text-[17px] font-semibold border-b-4 border-black border-opacity-20 hover:opacity-70"
+      disabled={!formValues.first || !formValues.last || !formValues.email || !formValues.password }
+      className={`mobile:w-[280px] mobile:h-[55px] pt-1 desktop:w-[460px] bg-Primary-Green text-white rounded-lg text-[17px] font-semibold border-b-4 border-black border-opacity-20 hover:opacity-70 ${
+        !formValues.first || !formValues.last || !formValues.email || !formValues.password
+          ? 'opacity-50 cursor-not-allowed'
+          : 'bg-Primary-Green opacity-70'
+      }`}
       >
       CLAIM YOUR FREE TRIAL
     </button>
