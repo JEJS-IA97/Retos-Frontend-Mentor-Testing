@@ -9,10 +9,10 @@ const Confirmation = ({cartItems, startNewOrder}) => {
             <img src={check} alt="comfirmed" className="h-[42px] w-[42p] mb-[30px]"/>
             <h1 className="leading-none text-[42px] font-bold mb-[15px]">Order Confirmed</h1>
             <p className="leading-none mb-[30px] text-RoseL-500">We hope you enjoy your food!</p>
-            <div className="bg-RoseL-100 mb-[30px] rounded-lg mobile:max-h-[250px] tablet:max-h-[300px] overflow-y-auto">
+            <div className="bg-RoseL-50 mb-[30px] rounded-lg mobile:max-h-[250px] tablet:max-h-[300px] overflow-y-auto">
                 <div className="p-[25px] w-full pb-0 pt-[10px]">
                     {cartItems.map((item) => (
-                    <div key={item.name} className="flex justify-between items-center h-[80px] border-b-2 border-RoseL-200 ">
+                    <div key={item.name} className="flex justify-between items-center h-[80px] border-b-2 border-RoseL-100 ">
                     <div className="flex items-center rounded-lg">
                     <img src={item.image.thumbnail} alt={item.name} className="w-[48px] h-[48px] mr-[15px] rounded-sm" />
                     <div>
