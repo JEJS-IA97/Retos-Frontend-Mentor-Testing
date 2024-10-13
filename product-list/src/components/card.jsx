@@ -21,10 +21,10 @@ const Card = ({ image, name, category, price, addToCart, incrementQuantity, decr
       <div className="mobile:w-[335px] flex flex-col mb-[25px] desktop:w-[250px] laptop:w-[250px] tablet:w-[250px]">
        <div className={`overflow-hidden rounded-lg flex items-center ${quantity >0 ? 'shadow-[0_0_0_2px_rgba(199,57,14,1)]' : ''}`}> 
         <picture>
-          <source srcSet={image.desktop} media="(min-width: 1440px)" />
-          <source srcSet={image.tablet} media="(min-width: 768px)" />
-          <source srcSet={image.mobile} media="(min-width: 375px)" />
-          <source srcSet={image.thumbnail} media="(min-width: 30px)" />
+          <source src={image.desktop} media="(min-width: 1440px)" />
+          <source src={image.tablet} media="(min-width: 768px)" />
+          <source src={image.mobile} media="(min-width: 375px)" />
+          <source src={image.thumbnail} media="(min-width: 30px)" />
           <img src={image.mobile} alt={name} />
         </picture>
         </div>
